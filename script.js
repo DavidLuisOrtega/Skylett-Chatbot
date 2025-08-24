@@ -90,7 +90,7 @@ class Chatbot {
         };
         recognition.onerror = (event) => {
             console.error('Speech recognition error:', event.error);
-            this.showStatus(`Voice input error: ${event.error}`);
+            let errorMessage = "Voice input error. Please try again."; if (event.error === "not-allowed" || event.error === "permission-denied") { errorMessage = "Microphone access denied. Please allow microphone permissions in your browser and try again."; } else if (event.error === "no-speech") { errorMessage = "No speech detected. Please speak clearly and try again."; } else if (event.error === "audio-capture") { errorMessage = "Microphone not found. Please check your microphone connection."; } else if (event.error === "network") { errorMessage = "Network error. Please check your internet connection."; } else if (event.error === "service-not-allowed") { errorMessage = "Speech recognition service not available. Please try typing instead."; } this.showStatus(errorMessage);
             this.stopRecording();
         };
         recognition.onend = () => {
