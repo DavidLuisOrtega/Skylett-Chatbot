@@ -281,10 +281,10 @@ class Chatbot {
                     text: text,
                     model_id: 'eleven_multilingual_v2',
                     voice_settings: {
-                        speed: 1.0,
-                        stability: 0.3,
-                        similarity_boost: 0.75,
-                        style: 0.5
+                        speed: 0.8,
+                        stability: 0.8,
+                        similarity_boost: 0.74,
+                        style: 0
                     }
                 })
             });
@@ -302,10 +302,10 @@ class Chatbot {
                         text: text,
                         model_id: 'eleven_monolingual_v1',
                         voice_settings: {
-                            speed: 1.0,
-                            stability: 0.3,
-                            similarity_boost: 0.75,
-                        style: 0.5
+                            speed: 0.8,
+                            stability: 0.8,
+                            similarity_boost: 0.74,
+                        style: 0
                         }
                     })
                 });
